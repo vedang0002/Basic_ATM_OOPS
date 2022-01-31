@@ -4,14 +4,12 @@ class ATM():
         self.balance=balance
         self.pin=pin
     def pin(self):
-        try:
-            for i in range(3):
-                p = input('\nEnter yor PIN number\n')
-                if (p==self.pin):
-                    break
-        except:
-            print('Limit exceeded! Please our nearest branch')
-            sys.exit()
+        for i in range(3):
+            p = input('Input your PIN\n')
+            if (p == '6121'):
+                break
+            elif (p != '6121' and i == 2):
+                sys.exit()
     def deposit(self):
         amount = float(input("Enter the amount to be deposited\n"))
         self.balance += amount
@@ -26,7 +24,7 @@ class ATM():
         print(f'Your current acount\'\s balance is {self.balance}')
 
 print('''Welcome to SBI!
-Please insert your card and enter your 4 digit PIN.''')
+Please insert your card and enter your 4 digit PIN.\n''')
 x = ATM()
 x.pin()
 print('''Select the number corresponding to your need

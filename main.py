@@ -7,9 +7,9 @@ class ATM():
     def pin(self):
         for i in range(3):
             p = input('Input your PIN\n')
-            if (p == self.pin):
+            if (p == '6121'):
                 break
-            elif (p != self.pin and i == 2):
+            elif (p != '6121' and i == 2):
                 sys.exit()
     def deposit(self):
         amount = float(input("Enter the amount to be deposited\n"))

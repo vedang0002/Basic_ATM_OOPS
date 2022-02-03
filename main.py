@@ -54,7 +54,7 @@ elif (response=='1'):
     initial_deposit = float(input("Enter the amount to be deposited"))
     data = {"Name": [name],
             "PIN": [pin],
-            "Initial Deposit": [initial_deposit]}
+            "Balance": [initial_deposit]}
     df2 = pd.DataFrame(data)
     df = df.append(df2)
     sys.exit()
